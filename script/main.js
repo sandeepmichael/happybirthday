@@ -10,12 +10,11 @@ window.addEventListener('load', () => {
         confirmButtonText: 'Yes',
         cancelButtonText: 'No',
     }).then((result) => {
-        if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
-        } else {
-            animationTimeline();
-        }
+        
+            result.isConfirmed ?   document.querySelector('.song').play()
+            : animationTimeline();
+        
+        
     });
 });
 
